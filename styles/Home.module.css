@@ -122,3 +122,13 @@
   }
 }
 
+.pokeCardWrap {
+  border: 1px solid gainsboro;
+  display: inline-block;
+  text-align: center;
+}
+
+.pokeCardTitle {
+  font-weight: 900;
+  font: Arial;
+}

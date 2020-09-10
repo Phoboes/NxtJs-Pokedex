@@ -5,7 +5,7 @@ import PokemonList from '../components/pokemonList'
 
 function Home({ pokemon }){
   return (
-      <>
+      <div className={ styles.container }>
       <Head>
         <title>Pokedex</title>
       </Head>
@@ -13,19 +13,11 @@ function Home({ pokemon }){
         <h1 className={ styles.title }>
           Welcome to the pokedex!
         </h1>
-          { pokemon.map((singlePokemon, i) => (
-            <Link href="/pokemon/[id]" as={`/pokemon/${singlePokemon.name}`} key={ i }>
-              <a>
-                <div className={ styles.pokeCardWrap }>
-                <p className={styles.pokeCardTitle}> { singlePokemon.name }</p>
-                <img src={ singlePokemon.data.sprites.front_default } />
-              </div>
-              </a>
-            </Link>
-            )) 
-          }
+        <div className={ styles.container }>
+          <PokemonList pokemon={ pokemon } />
+        </div>
     </div>
-    </>
+    </div>
   )
 }
 
